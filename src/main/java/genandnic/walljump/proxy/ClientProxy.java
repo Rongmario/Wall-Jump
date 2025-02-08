@@ -77,7 +77,7 @@ public class ClientProxy extends CommonProxy {
                 pl.onGround = true;
         }
 
-        if (pl.sprintingTicksLeft > 0 && new Vec3d(pl.motionX, pl.motionY, pl.motionZ).lengthVector() > 0.08)
+        if (pl.sprintingTicksLeft > 0 && new Vec3d(pl.motionX, pl.motionY, pl.motionZ).lengthSquared() > 0.08)
             pl.collidedHorizontally = false;
 
         if (pl.fallDistance > 2 && !pl.isElytraFlying()) {
